@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Nutrition App</title>
+    <link rel="stylesheet" href="stylesheets/themes/my-custom-theme.min.css" />
+    <link rel="stylesheet" href="stylesheets/themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="javascripts/script.js" defer></script>
+
+</head>
+<body>
+    <div data-role="page" id="landing">
+        <div data-role="header" data-theme="a">
+            <h1>Home Page</h1>
+        </div>
+        <div data-role="main" class="ui-content">
+            <div data-role="navbar" data-theme='a'>
+                <ul>
+                    <li>
+                        <div style="text-align: center;">
+                        <img src="workouts.png" alt="clipart of man on treadmill" width="300" height="300">
+                        </div>
+                        <a href="#workout">Add A Workout</a>
+                    </li>
+                    <li>
+                        <div style="text-align: center;">
+                        <img src="nutrition.jpg" alt="clipart of steak dinner" width="300" height="300">
+                        </div>
+                        <a href="#nutrition">Add Nutrition Intake</a>
+                    </li>
+                    <li>
+                        <div style="text-align: center;">
+                        <img src="tracker.jpeg" alt="clipart of calendar" width="300" height="300">
+                        </div>
+                        <a href="#tracker">Track Progress!</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="footer"></div>
+    </div>
+    <div data-role="page" id="workout">
+        <div data-role="header" data-theme="a">
+            <h1>Workouts</h1>
+            <div data-role="navbar" data-theme='a'>
+                <ul>
+                    <li><a href="#landing">Home Page</a></li>
+                    <li><a href="#nutrition">Nutrition</a></li>
+                    <li><a href="#tracker">Tracker</a></li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="main" class="ui-content">
+            <h1>Add Your Workout</h1>
+            <h2>Workout Duration (Minutes)</h2>
+            <input id="workoutMinutes" type="input"></input>
+            <h2>Type of Workout</h2>
+            <input id="workoutType" type="input"></input>
+            <h2>Workout date</h2>
+            <input id="workoutDate" type="date"></input>
+            <h2>Calories Burnt</h2>
+            <input id="caloriesBurnt" type="input"></input>
+            <button id="submitWorkout">Submit</button>
+        </div>
+        <div data-role="footer">
+        </div>
+    </div>
+    <div data-role="page" id="nutrition">
+        <div data-role="header" data-theme="a">
+            <h1>Nutrition</h1>
+            <div data-role="navbar" data-theme='a'>
+                <ul>
+                    <li><a href="#landing">Home Page</a></li>
+                    <li><a href="#workout">Workouts</a></li>
+                    <li><a href="#tracker">Tracker</a></li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="main" class="ui-content">
+            <h1>Add Your Nutrition</h1>
+            <h2>What did you eat?</h2>
+            <input id="foodEaten" type="input"></input>
+            <label for="mealType"><h2>What meal was this?</h2></label>
+            <select name="mealType" id="meals">
+                <option value="breakfast">Breakfast</option>
+                <option value="lunch">Lunch</option>
+                <option value="dinner">Dinner</option>
+                <option value="snack">Snacks</option>
+            </select>
+            <h2>Todays date</h2>
+            <input id="nutritionDate" type="date"></input>
+            <h2>Calories</h2>
+            <input id="nutritionCalories" type="input"></input>
+            <button id="submitNutrition">Submit</button>
+        </div>
+        <div data-role="footer">
+        </div>
+    </div>
+    <div data-role="page" id="tracker">
+        <div data-role="header" data-theme="a"> 
+
+            <h1>Tracker</h1>
+            <div data-role="navbar" data-theme='a'>
+                <ul>
+                    <li><a href="#landing">Home Page</a></li>
+                    <li><a href="#workout">Workouts</a></li>
+                    <li><a href="#nutrition">Nutrition</a></li>
+                </ul>
+            </div>            
+        </div>
+
+        <div data-role="content">
+            <h2>Workouts</h2>
+            <ul data-role="listview" id="workoutList">
+                <!-- Dynamically populated list items will go here -->
+            </ul>
+
+            <h2>Nutrition</h2>
+            <ul data-role="listview" id="nutritionList">
+                <!-- Dynamically populated list items will go here -->
+            </ul>
+        </div>
+        <div data-role="footer"></div>
+    </div>
+</body>
+</html>
